@@ -118,25 +118,23 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"src/App.js":[function(require,module,exports) {
-function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
-
 var nombre = document.querySelector("#nombre-input");
 var form = document.querySelector("#saludador-form");
 var edad = document.querySelector("#edad-input");
 var gen = document.querySelector("#genero-input");
 form.addEventListener("submit", function (event) {
+  var sms = "Hola ";
   var generoSaludo = "Señor ";
-  var mensaje = "Hola ";
 
   if (edad.value > 18) {
-    if (gen.value == "Femenino" || gen.value == "femenino") {
-      "Señora ", _readOnlyError("generoSaludo");
+    if (gen.value == "Femenino") {
+      generoSaludo = "Señora ";
     }
 
-    mensaje + generoSaludo, _readOnlyError("mensaje");
+    sms = sms + generoSaludo;
   }
 
-  alert(mensaje.value + nombre.value);
+  alert(sms + nombre.value);
 });
 },{}],"src/index.js":[function(require,module,exports) {
 "use strict";
@@ -170,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58789" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61019" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
