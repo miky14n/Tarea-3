@@ -122,6 +122,18 @@ var nombre = document.querySelector("#nombre-input");
 var form = document.querySelector("#saludador-form");
 var edad = document.querySelector("#edad-input");
 var gen = document.querySelector("#genero-input");
+var idi = document.querySelector("#Idioma");
+/*function tiipoSaludo( hrs){
+  var tiipoSaludos= "Buenas Noches "; 
+  if(hora>0 && hora<12){
+    tiipoSaludos= "Buenas Dias ";
+  }
+  else if(hora>11 && hora<19){
+    tiipoSaludos= "Buenas tardes ";
+  }
+  return tiipoSaludos;
+}*/
+
 form.addEventListener("submit", function (event) {
   var sms = "Hola ";
   var generoSaludo = "Señor ";
@@ -177,7 +189,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63154" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62705" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
