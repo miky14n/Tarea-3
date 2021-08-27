@@ -9,7 +9,8 @@ form.addEventListener("submit", (event) => {
   }
   else{
     if(edad.value>18){
-      alert("Hola Señor@" + nombre.value);
+      
+      alert("Hola Señor@ " + nombre.value);
     }
   }
   
