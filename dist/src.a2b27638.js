@@ -125,6 +125,15 @@ var gen = document.querySelector("#genero-input");
 form.addEventListener("submit", function (event) {
   var sms = "Hola ";
   var generoSaludo = "Señor ";
+  var hoy = new Date();
+  var hora = hoy.getHours();
+  var tiipoSaludo = "Buenas Noches ";
+
+  if (hora > 0 && hora < 12) {
+    tiipoSaludo = "Buenas Dias ";
+  } else if (hora > 11 && hora < 19) {
+    tiipoSaludo = "Buenas tardes ";
+  }
 
   if (edad.value > 18) {
     if (gen.value == "Femenino") {
@@ -134,7 +143,7 @@ form.addEventListener("submit", function (event) {
     sms = sms + generoSaludo;
   }
 
-  alert(sms + nombre.value);
+  alert(sms + tiipoSaludo + nombre.value);
 });
 },{}],"src/index.js":[function(require,module,exports) {
 "use strict";
@@ -168,7 +177,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61019" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63154" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
